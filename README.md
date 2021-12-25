@@ -29,6 +29,7 @@ To start your Nerves app:
   * Install dependencies with `mix deps.get`
   * Create firmware with `mix firmware`
   * Burn to an SD card with `mix firmware.burn`
+  * `ngrok http <Nerves IP address>:4000`
 
 ## Learn more
 
@@ -38,3 +39,4 @@ To start your Nerves app:
   * Discussion Slack elixir-lang #nerves ([Invite](https://elixir-slackin.herokuapp.com/))
   * Source: https://github.com/nerves-project/nerves
   * LINE Messaging API: https://developers.line.biz/en/docs/messaging-api/
+  * Blog: https://qiita.com/torifukukaiou/items/8393fb3deb2448163b07
