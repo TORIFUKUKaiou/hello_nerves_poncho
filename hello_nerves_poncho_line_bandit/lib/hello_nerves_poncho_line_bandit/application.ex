@@ -10,6 +10,7 @@ defmodule HelloNervesPonchoLineBandit.Application do
     children = [
       # Starts a worker by calling: HelloNervesPonchoLineBandit.Worker.start_link(arg)
       # {HelloNervesPonchoLineBandit.Worker, arg}
+      {Bandit, plug: HelloNervesPonchoLineBandit.MyPlug, scheme: :http, options: [port: 4000]}
     ]
 
     # See https://hexdocs.pm/elixir/Supervisor.html
