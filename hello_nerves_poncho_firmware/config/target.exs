@@ -95,3 +95,7 @@ config :mdns_lite,
 # Uncomment to use target specific configurations
 
 # import_config "#{Mix.target()}.exs"
+
+config :hello_nerves_poncho_line_bandit,
+  channel_secret: System.get_env("LINE_CHANNEL_SECRET"),
+  channel_access_token: System.get_env("LINE_CHANNEL_ACCESS_TOKEN")

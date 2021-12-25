@@ -53,7 +53,9 @@ defmodule HelloNervesPonchoFirmware.MixProject do
       {:nerves_system_rpi4, "~> 1.17", runtime: false, targets: :rpi4},
       {:nerves_system_bbb, "~> 2.12", runtime: false, targets: :bbb},
       {:nerves_system_osd32mp1, "~> 0.8", runtime: false, targets: :osd32mp1},
-      {:nerves_system_x86_64, "~> 1.17", runtime: false, targets: :x86_64}
+      {:nerves_system_x86_64, "~> 1.17", runtime: false, targets: :x86_64},
+      {:hello_nerves_poncho_line_bandit,
+       path: "../hello_nerves_poncho_line_bandit", targets: @all_targets, env: Mix.env()}
     ]
   end
 
