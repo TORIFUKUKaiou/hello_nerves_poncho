@@ -10,7 +10,8 @@ defmodule Liker.Application do
     children = [
       # Starts a worker by calling: Liker.Worker.start_link(arg)
       # {Liker.Worker, arg}
-      Liker.CreatedAtAgent
+      Liker.CreatedAtAgent,
+      Liker.Scheduler
     ]
 
     # See https://hexdocs.pm/elixir/Supervisor.html
