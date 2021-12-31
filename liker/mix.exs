@@ -27,7 +27,8 @@ defmodule Liker.MixProject do
       {:oauther, "~> 1.3"},
       {:jason, "~> 1.3"},
       {:extwitter, "~> 0.13.0"},
-      {:quantum, "~> 3.4"}
+      {:quantum, "~> 3.4"},
+      {:timex, "~> 3.7"}
     ]
   end
 end
