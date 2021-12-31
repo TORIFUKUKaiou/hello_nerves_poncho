@@ -27,15 +27,21 @@ defmodule Liker do
       Liker.Twitter.Api.create_favorite(id)
     end)
 
-    statuses
-    |> Enum.map(fn %{created_at: created_at} -> created_at end)
-    |> Enum.max()
-    |> Liker.CreatedAtAgent.update()
+    update_created_at(statuses)
   end
 
   defp last_created_at do
     %{created_at: created_at} = Liker.CreatedAtAgent.get()
 
     created_at
+  end
+
+  defp update_created_at([]), do: nil
+
+  defp update_created_at(statuses) do
+    statuses
+    |> Enum.map(fn %{created_at: created_at} -> created_at end)
+    |> Enum.max()
+    |> Liker.CreatedAtAgent.update()
   end
 end
