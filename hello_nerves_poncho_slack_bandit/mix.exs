@@ -27,7 +27,8 @@ defmodule HelloNervesPonchoSlackBandit.MixProject do
       {:bandit, "~> 0.4.5"},
       {:httpoison, "~> 1.8"},
       {:jason, "~> 1.3"},
-      {:aht20, "~> 0.4.2"}
+      {:aht20, "~> 0.4.2"},
+      {:circuits_gpio, "~> 1.0"}
     ]
   end
 end
