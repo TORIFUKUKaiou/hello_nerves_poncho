@@ -22,6 +22,9 @@ To start your Nerves app:
   * Set LINE environment variables
     * LINE_CHANNEL_SECRET
     * LINE_CHANNEL_ACCESS_TOKEN
+  * Set Slack environment variables
+    * SLACK_SIGNING_SECRET
+    * SLACK_BOT_TOKEN
   * (Option) Set Wi-Fi config
     * NERVES_WIFI_SSID
     * NERVES_WIFI_PASSPHRASE
@@ -29,7 +32,8 @@ To start your Nerves app:
   * Install dependencies with `mix deps.get`
   * Create firmware with `mix firmware`
   * Burn to an SD card with `mix firmware.burn`
-  * `ngrok http <Nerves IP address>:4000`
+  * `ngrok http <Nerves IP address>:4000` for LINE
+  * `ngrok http <Nerves IP address>:4001` for Slack
 
 ## Learn more
 
