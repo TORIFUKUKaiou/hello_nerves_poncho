@@ -20,6 +20,17 @@ defmodule HelloNervesPonchoSlackBandit.Handler do
     say(channel_id, "<@#{user_id}> 温度は#{temperature_c}℃、湿度は#{humidity_rh}%だぜ〜")
   end
 
+  defp do_handle_command("/light-awesome", query) do
+    channel_id = query["channel_id"]
+    user_id = query["user_id"]
+    value = query["text"] |> String.to_integer()
+
+    {:ok, gpio} = Circuits.GPIO.open(18, :output)
+    Circuits.GPIO.write(gpio, value)
+
+    say(channel_id, "<@#{user_id}>, you say #{value} !!!")
+  end
+
   defp say(channel, text) do
     %{
       channel: channel,
