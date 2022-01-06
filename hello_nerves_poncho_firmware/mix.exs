@@ -55,8 +55,7 @@ defmodule HelloNervesPonchoFirmware.MixProject do
       {:nerves_system_osd32mp1, "~> 0.8", runtime: false, targets: :osd32mp1},
       {:nerves_system_x86_64, "~> 1.17", runtime: false, targets: :x86_64},
       {:hello_nerves_poncho_line_bandit,
-       path: "../hello_nerves_poncho_line_bandit", targets: @all_targets, env: Mix.env()},
-      {:liker, path: "../liker", targets: @all_targets, env: Mix.env()}
+       path: "../hello_nerves_poncho_line_bandit", targets: @all_targets, env: Mix.env()}
     ]
   end
 
