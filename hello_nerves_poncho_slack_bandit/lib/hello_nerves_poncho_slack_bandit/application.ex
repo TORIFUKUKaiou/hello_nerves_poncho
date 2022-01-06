@@ -10,7 +10,8 @@ defmodule HelloNervesPonchoSlackBandit.Application do
     children = [
       # Starts a worker by calling: HelloNervesPonchoSlackBandit.Worker.start_link(arg)
       # {HelloNervesPonchoSlackBandit.Worker, arg}
-      {Bandit, plug: HelloNervesPonchoSlackBandit.MyPlug, scheme: :http, options: [port: 4001]}
+      {Bandit, plug: HelloNervesPonchoSlackBandit.MyPlug, scheme: :http, options: [port: 4001]},
+      {AHT20, bus_name: "i2c-1", name: AHT20}
     ]
 
     # See https://hexdocs.pm/elixir/Supervisor.html
